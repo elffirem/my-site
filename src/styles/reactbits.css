@@ -1,0 +1,133 @@
+/* TextCursor Component Styles */
+.text-cursor {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  min-height: 2rem;
+}
+
+.text-cursor .text {
+  color: #666;
+}
+
+.text-cursor .cursor {
+  animation: blink 1s infinite;
+  color: #333;
+  font-weight: 400;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* SpotlightCard Component Styles */
+.spotlight-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 24px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.spotlight-card:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.spotlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.emoji {
+  font-size: 1.5rem;
+}
+
+.card-description {
+  color: #666;
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.tech-badge {
+  background: rgba(0, 0, 0, 0.1);
+  color: #555;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.card-links {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.card-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.card-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .spotlight-card {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+  }
+  
+  .technologies {
+    gap: 4px;
+  }
+  
+  .tech-badge {
+    font-size: 0.75rem;
+    padding: 3px 6px;
+  }
+}
+
+
